@@ -28,6 +28,6 @@ social: true  # includes social icons at the bottom of the page
 
 🛠️ I'm experienced in developing and implementing machine learning algorithms, along with working extensively with neural networks and deep learning frameworks like **PyTorch, Transformers, Keras,** as well as other essential tools such as **Scikit-learn, Pandas, NumPy, Matplotlib, and NLTK.**
 
-For more details, check out my [CV](https://ariyanhossain2208.github.io/cv/) and my [GitHub page](https://github.com/ariyanhossain2208).
+For more details, check out my [CV](https://ariyanhossain2208.github.io/assets/pdf/Ariyan%20Hossain-Resume.pdf) and my [GitHub page](https://github.com/ariyanhossain2208).
 
 The best way to contact me is by email: [ariyan.hossain2208@gmail.com](mailto:ariyan.hossain2208@gmail.com).

@@ -1,45 +1,13 @@
 ---
 ---
 
-@inproceedings{saman2023banglaclickbert,
-  author        = {Saman Sarker Joy and Tanusree Das Aishi and Naima Tahsin Nodi and Annajiat Alim Rasel},
-  booktitle     = {Proceedings of The 21th Annual Workshop of the Australasian Language Technology Association},
-  title         = {BanglaClickBERT: Bangla Clickbait Detection from News Headlines using Domain Adaptive BanglaBERT and MLP Techniques},
-  year          = {2023},
+@misc{hossain2023exploration,
+  title         = {Exploration and Mitigation of Gender Bias in Word Embeddings from Transformer-based Language Models},
+  author        = {Hossain, A. and Hannan, K. M. A. and Haque, R. and Musarrat, H. and Rafa, N. T. and Islam, S. B. and Dipu, S. A. and Sadeque, F. Y.},
+  year          = {2024},
+  note          = {Manuscript submitted for publication},
   bibtex_show   = {true},
-  archiveprefix = {ALTA 2023},
-  primaryclass  = {cs.LG},
-  pdf           = {https://alta2023.alta.asn.au/files/3.pdf},
-  abstract      = {News headlines or titles that deliberately persuade readers to view a particular online content are referred to as clickbait. There have been numerous studies focused on clickbait detection in English language, compared to that, there have been very few researches carried out that address clickbait detection in Bangla news headlines. In this study, we have experimented with several distinctive transformers models, namely BanglaBERT and XLM-RoBERTa. Additionally, we introduced a domain-adaptive pretrained model, BanglaClickBERT. We conducted a series of experiments to identify the most effective model. The dataset we used for this study contained 15,056 labeled and 65,406 unlabeled news headlines; in addition to that, we have collected more unlabeled Bangla news headlines by scraping clickbait-dense websites making a total of 1 million unlabeled news headlines in order to make our BanglaClickBERT. Our approach has successfully surpassed the performance of existing state-of-the-art technologies providing a more accurate and efficient solution for detecting clickbait in Bangla news headlines, with potential implications for improving online content quality and user experience.},
-  preview       = {gcn-zero-one.png},
+  abstract      = {Machine learning can uncover data biases resulting from human error when implemented without proper restraint. However, this complexity often arises from word embedding, a prominent technique for capturing textual input as vectors applied in different machine learning and natural language processing tasks. Word embeddings are biased because they are trained on text data, which frequently incorporates prejudice and bias from society. These biases may become deeply established in the embeddings, producing unfair or biased results in AI applications. Efforts are made to recognize and lessen certain prejudices, but comprehensive bias elimination is still tricky. In Natural Language Processing (NLP) systems, contextualized word embeddings are now more commonly used for representing texts than traditional embeddings. It is also critical to evaluate biases contained in these since biases of various kinds have already been discovered in standard word embeddings. We focus on transformer-based language models including BERT, ALBERT, RoBERTa and DistilBERT which produce contextual word embeddings. To measure the extent to which gender biases exist, we calculate the probabilities of filling MASK by the models and based on this, we develop a novel metric, MALoR, to measure gender bias. We then continue pretraining these models on a gender-balanced dataset to mitigate the bias. Gender balanced dataset is created by applying Counterfactual Data Augmentation (CDA). To ensure consistency, we perform our experiments on different gender pronouns and nouns - “he-she,” “his-her,” and “male names-female names.” Finally, using a downstream task, we verify that our debiased models show no performance drop. These debiased models can then be used across several applications.},
+  preview       = {bertbeforeafter.jpg},
   selected      = {true}
-}
-
-@misc{farhan2024gazetteerenhanced,
-      title={Gazetteer-Enhanced Bangla Named Entity Recognition with BanglaBERT Semantic Embeddings K-Means-Infused CRF Model}, 
-      author={Niloy Farhan and Saman Sarker Joy and Tafseer Binte Mannan and Farig Sadeque},
-      year={2024},
-      eprint={2401.17206},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      preview       = {newpaper.png},
-      selected      = {false},
-      bibtex_show   = {true},
-      pdf           = {https://arxiv.org/abs/2401.17206},
-      abstract      = {Named Entity Recognition (NER) is a sub-task of Natural Language Processing (NLP) that distinguishes entities from unorganized text into predefined categorization. In recent years, Bangla NLP has seen advancements in various subtasks, but Named Entity Recognition in this language continues to face challenges, requiring dedicated efforts for improvement. In this research, we explored the existing state of research in Bangla Named Entity Recognition. We tried to figure out the limitations that current techniques and datasets have and we addressed these limitations. Additionally, we developed a Gazetteer that has the ability to significantly boost the performance of NER. We also proposed a new NER solution by taking advantage of our created Gazetteer and state-of-the-art NLP tools that outperform conventional techniques, especially for low-resource-languages like Bangla.},
-  
-}
-
-@inproceedings{saman2023featurelevel,
-  author        = {Saman Sarker Joy and Tanusree Das Aishi},
-  booktitle     = {Proceedings of The 21th Annual Workshop of the Australasian Language Technology Association},
-  title         = {Feature-Level Ensemble Learning for Robust Synthetic Text Detection with DeBERTaV3 and XLM-RoBERTa},
-  year          = {2023},
-  bibtex_show   = {true},
-  archiveprefix = {ALTA 2023},
-  primaryclass  = {cs.LG},
-  pdf           = {https://alta2023.alta.asn.au/files/st_04.pdf},
-  abstract      = {As large language models, or LLMs, continue to advance in recent years, they require the development of a potent system to detect whether a text was created by a human or an LLM in order to prevent the unethical use of LLMs. To address this challenge, ALTA Shared Task 2023 introduced a task to build an automatic detection system that can discriminate between human-authored and synthetic text generated by LLMs. In this paper, we present our participation in this task where we proposed a feature-level ensemble of two transformer models namely DeBERTaV3 and XLM-RoBERTa to come up with a robust system. The given dataset consisted of textual data with two labels where the task was binary classification. Experimental results show that our proposed method achieved competitive performance among the participants. We believe this solution would make an impact and provide a feasible solution for detection of synthetic text detection. },
-  preview       = {interpretation-trees.png},
-  selected      = {false}
 }

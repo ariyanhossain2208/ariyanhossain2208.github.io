@@ -2,11 +2,11 @@
   type: map
   contents:
     - name: Full Name
-      value: Saman Sarker Joy
+      value: Ariyan Hossain
     - name: Languages
       value: English, Bengali
     - name: Lives In
-      value: Dhaka, Bangladesh
+      value: 01, Poribagh Garden Tower, Dhaka, Bangladesh
 
 - title: Education
   type: time_table
@@ -17,31 +17,42 @@
       description:
         - "Achieved Highest Distinction"
         - "Included in VC's List"
-        - "Thesis Title: Research on the latest trends in Bangla Named Entity Recognition"
+        - "CGPA: 4.0/4.0"
+        - "Thesis Title: Exploration and Mitigation of Gender Bias in Word Embeddings from Transformer-based Language Models"
         - "Thesis Supervisor: Dr. Farig Yousuf Sadeque"
 
 
 - title: Experience
   type: time_table
   contents:
-    - title: Student Tutor (ST/TA), Department of Computer Science and Engineering, BRAC University
+    - title: Graduate Research Assistant, Department of Computer Science and Engineering, BRAC University
+      year: 2023-Present
+      description:
+        - Job Type- Full-Time (40 Hours / Week)
+        - Supervisor- Dr. Muhammad Nur Yanhaona
+        - Currently working on identifying framing media bias in news articles and extracting and linking events using Machine Learning and NLP
+
+    - title: Undergraduate Teaching Assistant, Department of Computer Science and Engineering, BRAC University
       year: 2022-2023
       description:
-        - Taught students about Data Structures, Elements of Language Theory, Structured Programming Concepts, Object-oriented Programming (OOP).
-        - Gave 12+3 = 15 hours of live consultations and lab classes per week.
-        - Checked assignment scripts and lab homeworks and assisted faculties.
-        - Gave consultations to students and assisted faculties with their works.
+        - Job Type- Part-Time (15 Hours / Week)
+        - Course Taugh- Algorithms
+        - Responsibilities- Gave consultations to students, Took labs of student and assisted them, Graded copies of students
 
 
-- title: Technical Skills
+- title: Skill Set
   type: map
   contents:
-    - name: Programming Languages/Tools
-      value: Python, C++, Java, LATEX, Assembly Language.
-    - name: Frameworks
-      value: TensorFlow, PyTorch, Transformers.
-    - name: Interested In
-      value: Natural Language Processing, Neural Networks, Machine Learning.
+    - name: Programming Languages
+      value: Python, Java
+    - name: Other Languages
+      value: MATLAB, x86 Assembly, Bash, Verilog, LaTeX
+    - name: Web Programming
+      value: HTML, CSS, PHP, JavaScript, MySQL
+    - name: Frameworks/Tools
+      value: Tensorflow, PyTorch, Transformers, Keras, Scikit-learn, Pandas, NumPy, Matplotlib, NLTK
+    - name: Coursework
+      value: Data Structures and Algorithms, Machine Learning, Natural Language Processing, Neural Networks, Computer Networks, Database Management System, Computer Interfacing, Software Engineering
 
 
 - title: Honors and Awards
@@ -49,19 +60,16 @@
   contents:
     - year: 2023
       items:
-        - "4th in ML Competition CUET ETE Day 2023"
+        - "Brac University Performance Based 100% Scholarship for having CGPA 4.0/4.0"
         - "Graduated with Highest Distinction: Awarded to candidates whose CGPA is 3.80 or higher"
-        - Included in VCs List for outstanding academic performance that particular semester for 7 out 11 semesters
-    - year: 2022
-      items: 
-        - 4th in BRACU Intra University Programming Contest - Division 2
-        - Top 14% in Pre-Assessment in Robi Datathon 2.0
-    - year: 2021
-      items: 
-        - Merit Scholarship Based on Academic Results of B.Sc. (2021 - 2023)
+        - "Included in VCs List: Awarded to candidates whose CGPA is 3.90 or higher"
     - year: 2020
       items: 
-        - Honorable Mentions in Make an Educative Tutorial Competition - IEEE
+        - Outstanding Cambridge Learner Awards for World Highest Marks (100%) in AS Level Mathematics
+    - year: 2018
+      items: 
+        - The Daily Star Award for A Level Outstanding Results for having a minimum of 3 A's in A level
+
 
 
 # - title: Interests
