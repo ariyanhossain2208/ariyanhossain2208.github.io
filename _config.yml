@@ -7,17 +7,15 @@ first_name: Ariyan
 middle_name: 
 last_name: Hossain
 pronouns:
-email: saman.sarker.joy@gmail.com
+email: ariyan.hossain2208@gmail.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Computer Science Graduate
+  Graduate Research Assistant
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 keywords:  # add your own keywords or leave empty
-
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: favicon.ico  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
-
 url: https://ariyanhossain2208.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/
 last_updated: false # set to true if you want to display last updated in the footer
@@ -67,16 +65,16 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 # Social integration
 # -----------------------------------------------------------------------------
 
-github_username: samanjoy2 # your GitHub user name
+github_username: ariyanhossain2208 # your GitHub user name
 gitlab_username: # your GitLab user name
 twitter_username: # your Twitter handle
 mastodon_username: # your mastodon instance+username in the format instance.tld/@username
-linkedin_username: saman-sarker-joy # your LinkedIn user name
+linkedin_username: ariyanhossain # your LinkedIn user name
 telegram_username: # your Telegram user name
-scholar_userid: 10s86xMAAAAJ # your Google Scholar ID
+scholar_userid:  # your Google Scholar ID
 semanticscholar_id: # your Semantic Scholar ID
 whatsapp_number: # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
-orcid_id: 0009-0004-0101-7418 # your ORCID ID
+orcid_id: 0009-0005-3831-9054 # your ORCID ID
 medium_username: # your Medium username
 quora_username: # your Quora username
 publons_id: # your ID on Publons
@@ -94,8 +92,8 @@ pinterest_id: # your pinterest id
 unsplash_id: # your unsplash id
 instagram_id: # your instagram id
 facebook_id: # your facebook id
-youtube_id: equalcoding # your youtube channel id (youtube.com/@<youtube_id>)
-discord_id: # your discord id (18-digit unique numerical identifier)
+youtube_id: #equalcoding # your youtube channel id (youtube.com/@<youtube_id>)
+discord_id: 380391231391531009 # your discord id (18-digit unique numerical identifier)
 
 contact_note: Best way to reach me is by mail!
 

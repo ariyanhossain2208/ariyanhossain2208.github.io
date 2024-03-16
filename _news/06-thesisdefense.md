@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2023-05-25 09:49:00+0000
+date: 2023-09-21 09:49:00+0000
 inline: true
 ---
 
-My Bachelor's thesis [Research on the latest trends in Bangla Named Entity Recognition](https://) defended at [BRAC University](https://www.bracu.ac.bd/).
+Defended my undergraduate thesis [Exploration and Mitigation of Gender Bias in Word Embeddings from Transformer-based Language Models](https://)  at [BRAC University](https://www.bracu.ac.bd/).

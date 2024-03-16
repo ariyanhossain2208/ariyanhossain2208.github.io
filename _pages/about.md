@@ -2,11 +2,11 @@
 layout: about
 title: About
 permalink: /
-subtitle: Computer Science and Engineering Graduate | Researcher
+subtitle: Graduate Research Assistant @ Brac University | ML, DL, NLP
 
 profile:
   align: right
-  image: sam-adam-day-profile.jpg
+  image: propic.jpg
   image_circular: true # crops the image to make it circular
   address:
 
@@ -14,15 +14,20 @@ news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
+<div style="margin-top: 35px;"></div>
 
-I am a Computer Science & Engineering Graduate student at [BRAC University](https://www.bracu.ac.bd/) with an interest in Deep Learning, Machine Learning, Natural Language Processing and Programming Languages.
+👋🏻 **Hey there, I'm Ariyan, Welcome to  my  Portfolio!**
 
-I am a proficient programmer with expertise in a range of languages, including Python, Java, C++, and more. 
+🎓 I'm a **Computer Science & Engineering (CSE)** Graduate student at [BRAC University](https://www.bracu.ac.bd/), Dhaka, Bangladesh.
 
-I have hands-on experience in developing and implementing machine learning algorithms, as well as working with neural networks and deep learning frameworks like TensorFlow and PyTorch. 
+👨🏼‍💻 Currently, I'm appointed as a **Research Assistant** at [BRAC University](https://www.bracu.ac.bd/) and I'm working on **framing bias in news articles, event extraction and event coreference resolution**.
 
-My strong foundation in Natural Language Processing has enabled me to create NLP-based projects. As a research enthusiast, I am deeply passionate about advancing the field and my contributions have made a meaningful impact in this area.
+🔬 My research interests are in **Deep Learning, Machine Learning, and Natural Language Processing.**
 
-Check out my [GitHub page](https://github.com/samanjoy2).
+🖥️ I'm proficient in a wide range of programming languages, including **Python, Java, HTML, CSS, PHP, JavaScript, SQL.**
 
-The best way to contact me is by email: [saman.sarker.joy@gmail.com](mailto:saman.sarker.joy@gmail.com).
+🛠️ I'm experienced in developing and implementing machine learning algorithms, along with working extensively with neural networks and deep learning frameworks like **PyTorch, Transformers, Keras,** as well as other essential tools such as **Scikit-learn, Pandas, NumPy, Matplotlib, and NLTK.**
+
+For more details, check out my [CV](https://ariyanhossain2208.github.io/cv/) and my [GitHub page](https://github.com/ariyanhossain2208).
+
+The best way to contact me is by email: [ariyan.hossain2208@gmail.com](mailto:ariyan.hossain2208@gmail.com).
