@@ -25,6 +25,13 @@
 - title: Experience
   type: time_table
   contents:
+    - title: Lecturer, Department of Computer Science and Engineering, BRAC University
+      year: 2024-Present
+      description:
+        - Job Type- Full-Time (40 Hours / Week)
+        - Course Taught- CSE220 (Data Structures) and CSE221 (Algorithms)
+        - Responsibilities- Took theory and lab classes, Created questions, Invigilated exams and Graded scripts
+
     - title: Graduate Research Assistant, Department of Computer Science and Engineering, BRAC University
       year: 2023-Present
       description:
@@ -36,8 +43,8 @@
       year: 2022-2023
       description:
         - Job Type- Part-Time (15 Hours / Week)
-        - Course Taugh- Algorithms
-        - Responsibilities- Gave consultations to students, Took labs of student and assisted them, Graded copies of students
+        - Course Taught- CSE221 (Algorithms)
+        - Responsibilities- Gave consultations, Took labs and Graded scripts
 
 
 - title: Skill Set
