@@ -136,24 +136,27 @@ export default function Miscellaneous() {
                         {/* Images Below - Side by Side */}
                         <div className="p-6 pt-0">
                           <div className="grid grid-cols-2 gap-4">
-                            {section.workshops && section.workshops[0]?.images?.map((img, idx) => (
-                              <div key={idx}>
-                                <div className="relative w-full h-64 bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg overflow-hidden">
-                                  <Image
-                                    src={img}
-                                    alt={`${section.title} ${idx + 1}`}
-                                    fill
-                                    className="object-cover"
-                                    sizes="(max-width: 768px) 50vw, 50vw"
-                                  />
-                                </div>
-                                {section.workshops[0]?.imageTitles && section.workshops[0].imageTitles[idx] && (
-                                  <div className="text-center mt-2 text-sm text-gray-800 opacity-60">
-                                    {section.workshops[0].imageTitles[idx]}
+                            {section.workshops && section.workshops[0]?.images?.map((img, idx) => {
+                              const firstWorkshop = section.workshops?.[0]
+                              return (
+                                <div key={idx}>
+                                  <div className="relative w-full h-64 bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg overflow-hidden">
+                                    <Image
+                                      src={img}
+                                      alt={`${section.title} ${idx + 1}`}
+                                      fill
+                                      className="object-cover"
+                                      sizes="(max-width: 768px) 50vw, 50vw"
+                                    />
                                   </div>
-                                )}
-                              </div>
-                            ))}
+                                  {firstWorkshop?.imageTitles && firstWorkshop.imageTitles[idx] && (
+                                    <div className="text-center mt-2 text-sm text-gray-800 opacity-60">
+                                      {firstWorkshop.imageTitles[idx]}
+                                    </div>
+                                  )}
+                                </div>
+                              )
+                            })}
                           </div>
                         </div>
                       </>
