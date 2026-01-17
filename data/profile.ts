@@ -12,7 +12,7 @@ export const personalInfo = {
   socialLinks: {
     github: 'https://github.com/ariyanhossain2208',
     linkedin: 'https://linkedin.com/in/ariyanhossain',
-    googleScholar: 'https://scholar.google.com',
+    googleScholar: 'https://scholar.google.com/citations?hl=en&user=AyQO80UAAAAJ&view_op=list_works',
   },
   aboutMe: [
     "📢 <strong> Looking for Ph.D. opportunities for Fall 2026 / Spring 2027 </strong>",
