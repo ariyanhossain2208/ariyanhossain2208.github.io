@@ -212,7 +212,7 @@ export const projects: Project[] = [
       'NLP project focused on detecting sexist vs. non-sexist content in online texts. Performed EDA and preprocessing with class balance checks, text cleaning, tokenization, and embeddings. Built classifiers using CNN, BiLSTM, and GRU models for explainable sexism detection.',
     technologies: ['Python', 'TensorFlow', 'Keras', 'NLTK', 'Pandas'],
     github: 'https://github.com/ariyanhossain2208/Detection-of-Online-Sexism-NLP',
-    image: '/online-sexism.png',
+    image: '/online-sexism.PNG',
   },
   {
     title: 'Sentiment Analysis on IMDB Movie Reviews',
@@ -228,7 +228,7 @@ export const projects: Project[] = [
       'Designed and trained CNN models with varied activation functions, kernel sizes, filters, and strides. Compared model performance to analyze the impact of different architectural choices on image classification accuracy.',
     technologies: ['Python', 'TensorFlow', 'Keras', 'NumPy'],
     github: 'https://github.com/ariyanhossain2208/Exploring-Traditional-CNNs',
-    image: '/image-classification.PNG',
+    image: '/image-classification.png',
   },
   {
     title: 'Wine Quality Prediction using Machine Learning',
