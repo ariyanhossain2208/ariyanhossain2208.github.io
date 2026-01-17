@@ -404,7 +404,7 @@ export const miscellaneous: MiscItem[] = [
         ],
       },
       {
-        title: 'Seminars/Workshop I Took/Attended',
+        title: 'Seminars/Workshop I Took',
         image: '/workshops.jpg', // Add your workshops image here
         workshops: [
           {
