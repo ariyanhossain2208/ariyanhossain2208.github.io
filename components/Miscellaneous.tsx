@@ -93,7 +93,15 @@ export default function Miscellaneous() {
                       <>
                         {/* Full Width Content */}
                         <div className="p-6">
-                          <h4 className={`font-semibold text-gray-800 mb-4 ${section.title === 'Courses I Teach/Taught' ? 'text-xl' : 'text-lg'}`}>
+                          <h4
+                            className={`font-semibold text-gray-800 mb-4 ${
+                              ['Courses I Teach/Taught', 'Seminars/Workshop I Took', 'Other Services'].includes(
+                                section.title
+                              )
+                                ? 'text-xl'
+                                : 'text-lg'
+                            }`}
+                          >
                             {section.title}
                           </h4>
                           <div className="space-y-4 pl-4">
