@@ -128,7 +128,7 @@ export const research: ResearchItem[] = [
     description:
       'Developing a two-phase framework integrating Retrieval-Augmented Generation (RAG) and Reinforcement Learning from AI Feedback (RLAIF) to detect and quantify dialectal bias across four major Bengali dialects. Designing two RAG pipelines for standard-to-dialectal translation and constructing a gold-labeled benchmark dataset of 300 standardized questions per dialect.',
     links: [
-      { text: 'ACL Anthology', url: 'https://aclanthology.org/2025.banglalp-1.22/' },
+      { text: 'ACL Anthology', url: 'https://aclanthology.org/2025.banglalp-1.22/ ' },
     ],
   },
   {
@@ -319,7 +319,7 @@ export const achievements: Achievement[] = [
 ]
 
 
-// Miscellaneous (Teaching)
+// Teaching section (previously Miscellaneous)
 export interface Course {
   code: string
   name: string
