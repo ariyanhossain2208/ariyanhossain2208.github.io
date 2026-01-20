@@ -319,7 +319,7 @@ export const achievements: Achievement[] = [
 ]
 
 
-// Teaching section (previously Miscellaneous)
+// Teaching section 
 export interface Course {
   code: string
   name: string
@@ -453,22 +453,5 @@ export const miscellaneous: MiscItem[] = [
     ],
   },
 ]
-
-// Language Proficiency
-export const languages = {
-  english: {
-    level: 'Fluent',
-    ielts: {
-      overall: '8.0',
-      listening: '9',
-      reading: '8.5',
-      writing: '7.5',
-      speaking: '7.5',
-    },
-  },
-  bengali: {
-    level: 'Fluent (Native)',
-  },
-}
 
 
