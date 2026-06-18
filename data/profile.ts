@@ -121,18 +121,47 @@ export interface ResearchItem {
 
 export const research: ResearchItem[] = [
   {
-    title: 'Exploring Bengali Dialectal Bias and Mitigation Strategies in Multilingual Large Language Models',
-    authors: 'K. M. J. Sami, D. Sumit, Ariyan Hossain, Dr. Farig Yousuf Sadeque',
-    year: 2025,
-    venue: 'BLP Workshop @ IJCNLP-AACL 2025 (Accepted)',
+    title: 'Contaminated Collaboration: Measuring Gender Bias Transfer in LLM-Assisted Student Writing',
+    authors: 'Ariyan Hossain, K. K. Rabbi, Dr. Farig Yousuf Sadeque, Dr. S. M. Taiabul Haque',
+    year: 2026,
+    venue: 'Under Review, ARR (targeting EMNLP 2026)',
     description:
-      'Developing a two-phase framework integrating Retrieval-Augmented Generation (RAG) and Reinforcement Learning from AI Feedback (RLAIF) to detect and quantify dialectal bias across four major Bengali dialects. Designing two RAG pipelines for standard-to-dialectal translation and constructing a gold-labeled benchmark dataset of 300 standardized questions per dialect.',
+      'Conducted the first controlled study (N=153) examining how LLM writing suggestions propagate gender stereotypes during human-LLM co-authoring of career essays. Demonstrated bias transfer through a two-measure evaluation framework combining an agentic language gap (via a fine-tuned agency classifier) and a novel Stereotype Congruence Rate (SCR) metric.',
     links: [
-      { text: 'ACL Anthology', url: 'https://aclanthology.org/2025.banglalp-1.22/ ' },
+      { text: 'arXiv', url: 'https://arxiv.org/abs/2606.15914' },
     ],
   },
   {
-    title: 'Exploring and Mitigating Gender Bias in Transformer-based Language Models',
+    title: 'Benchmarking Bengali Dialectal Bias: A Multi-Stage Framework Integrating RAG-Based Translation and Human-Augmented RLAIF',
+    authors: 'K. M. J. Sami, D. Sumit, Ariyan Hossain, Dr. Farig Yousuf Sadeque',
+    year: 2025,
+    venue: 'Under Review, ARR (targeting EMNLP 2026)',
+    description:
+      'Created a benchmark evaluating 19 LLMs across 4,000 gold-labeled question sets spanning nine Bengali dialects using RAG-based translation. Proposed a RLAIF bias evaluation framework with Chain-of-Thought rubrics and introduced the CBS (Cultural Bias Score) metric for safety-critical assessment.',
+    links: [
+      { text: 'arXiv', url: 'https://arxiv.org/abs/2603.21359' },
+    ],
+  },
+  {
+    title: 'A Comparative Analysis of RAG Techniques for Bengali Standard-to-Dialect Machine Translation Using LLMs',
+    authors: 'K. M. J. Sami, D. Sumit, Ariyan Hossain, Dr. Farig Yousuf Sadeque',
+    year: 2025,
+    venue: 'BLP Workshop @ IJCNLP-AACL 2025 (Published)',
+    description:
+      'Designed two RAG pipelines for standard-to-dialectal Bengali translation across six dialects using in-context learning. Reduced WER from 76% to 55% with sentence-pair RAG, enabling Llama-3.1-8B to outperform GPT-OSS-120B.',
+    links: [
+      { text: 'ACL Anthology', url: 'https://aclanthology.org/2025.banglalp-1.22/' },
+    ],
+  },
+  {
+    title: 'Identifying Framing Bias in Online Climate Change News Articles',
+    authors: 'Ariyan Hossain, Dr. Muhammad Nur Yanhaona',
+    year: 2024,
+    description:
+      'Built a frame-classified climate change news dataset via expert annotation and GPT-4 synthetic augmentation for multi-class framing classification. Fine-tuned Longformer, BigBird, BERT, and LLaMA-3.1 for long-document classification, applying QLoRA for memory-efficient parameter-efficient fine-tuning (PEFT).',
+  },
+  {
+    title: 'Exploring and Mitigating Gender Bias in Encoder-Based Transformer Models',
     authors: 'Ariyan Hossain, K. M. A. Hannan, R. Haque, N. T. Rafa, H. Musarrat, S. A. Dipu, Dr. Farig Yousuf Sadeque',
     year: 2025,
     venue: 'Undergraduate Thesis',
@@ -141,13 +170,6 @@ export const research: ResearchItem[] = [
     links: [
       { text: 'arXiv', url: 'https://arxiv.org/abs/2511.00519' },
     ],
-  },
-  {
-    title: 'Identifying Framing Bias in Online Climate Change News Articles',
-    authors: 'Ariyan Hossain, Dr. Muhammad Nur Yanhaona',
-    year: 2024,
-    description:
-      'Building a frame-classified climate change news dataset using expert annotation and synthetic data augmentation through LLM (GPT-4) prompt engineering. Performing multi-class framing classification with Longformer, BigBird, BERT, and Llama-3.1 architectures for long-text handling. Applying Parameter-Efficient Fine-Tuning (PEFT) QLoRA to finetune LLaMA to reduce memory requirements.',
   },
 ]
 
