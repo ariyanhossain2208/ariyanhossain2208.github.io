@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ariyan Hossain — NLP Researcher</title>
+<meta name="description" content="Ariyan Hossain is an NLP researcher and lecturer at BRAC University working on bias detection and mitigation in language models, fairness, and Bengali NLP.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --measure:620px;
+  --paper:#fafaf7;
+  --ink:#1c1c24;
+  --muted:#63636e;
+  --indigo:#33418c;
+  --indigo-dark:#27336f;
+  --tint:#eceef8;
+  --rule:#dcdcd4;
+  --mask-bg:#1c1c24;
+  --mask-fg:#fafaf7;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  *,*::before,*::after{animation:none!important;transition:none!important;}
+}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'STIX Two Text',Georgia,serif;
+  font-size:17px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--tint);color:var(--indigo-dark);}
+a{color:var(--indigo);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s ease,color .15s ease;}
+a:hover{border-bottom-color:var(--indigo);}
+a:focus-visible{outline:2px solid var(--indigo);outline-offset:2px;border-radius:1px;}
+.mono{font-family:'IBM Plex Mono',monospace;}
+
+.wrap{
+  max-width:1060px;
+  margin:0 auto;
+  padding:0 28px;
+  display:grid;
+  grid-template-columns:280px 1fr;
+  gap:72px;
+}
+
+/* ---------- sidebar ---------- */
+aside{
+  padding-top:72px;
+  padding-bottom:64px;
+}
+.side-inner{
+  position:fixed;
+  top:48px;
+  width:280px;
+}
+.bn-name{
+  font-family:'STIX Two Text',serif;
+  color:var(--muted);
+  font-size:.95rem;
+  letter-spacing:.02em;
+  margin-bottom:4px;
+}
+h1{
+  font-size:1.72rem;
+  font-weight:700;
+  line-height:1.15;
+  letter-spacing:-.01em;
+  margin-bottom:10px;
+}
+.role{
+  font-size:.98rem;
+  color:var(--muted);
+  line-height:1.5;
+  margin-bottom:26px;
+}
+.role em{font-style:italic;color:var(--ink);}
+.photo{
+  width:100%;
+  max-width:230px;
+  aspect-ratio:5/6;
+  background:linear-gradient(160deg,var(--tint),#dfe3f2);
+  border:1px solid var(--rule);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--indigo);
+  font-family:'IBM Plex Mono',monospace;
+  font-size:.72rem;
+  letter-spacing:.08em;
+  margin-bottom:26px;
+}
+nav{margin-bottom:28px;}
+nav a{
+  display:block;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:.78rem;
+  letter-spacing:.06em;
+  text-transform:lowercase;
+  color:var(--ink);
+  padding:5px 0;
+  border-bottom:none;
+}
+nav a::before{content:"→ ";color:var(--rule);transition:color .15s ease;}
+nav a:hover{color:var(--indigo);}
+nav a:hover::before{color:var(--indigo);}
+.contact{
+  font-size:.86rem;
+  color:var(--muted);
+  line-height:1.9;
+  border-top:1px solid var(--rule);
+  padding-top:20px;
+}
+.contact a{color:var(--indigo);}
+.contact .mono{font-size:.78rem;}
+
+.cv-note{
+  display:none;
+  font-size:.78rem;
+  font-style:italic;
+  color:var(--muted);
+  line-height:1.5;
+  margin-top:6px;
+  padding:6px 10px;
+  background:var(--tint);
+  border-radius:3px;
+}
+.cv-note.show{display:block;}
+
+/* ---------- main ---------- */
+main{
+  padding-top:72px;
+  padding-bottom:96px;
+  min-width:0;
+}
+.intro{
+  font-size:1.42rem;
+  line-height:1.5;
+  font-weight:400;
+  max-width:38ch;
+  margin-bottom:18px;
+}
+.mask-token{
+  display:inline-block;
+  background:var(--mask-bg);
+  color:var(--mask-fg);
+  font-family:'IBM Plex Mono',monospace;
+  font-size:.78em;
+  padding:.08em .42em .12em;
+  border-radius:3px;
+  cursor:pointer;
+  vertical-align:baseline;
+  border:none;
+  transition:background .15s ease;
+  line-height:1.4;
+}
+.mask-token:hover{background:var(--indigo-dark);}
+.mask-token:focus-visible{outline:2px solid var(--indigo);outline-offset:2px;}
+.mask-prob{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:.7rem;
+  color:var(--muted);
+  margin-left:2px;
+}
+.intro-note{
+  font-size:.82rem;
+  color:var(--muted);
+  font-style:italic;
+  margin-bottom:40px;
+}
+.lede{
+  max-width:62ch;
+  margin-bottom:14px;
+}
+.lede + .lede{margin-bottom:0;}
+
+section{margin-top:42px;}
+h2{
+  max-width:var(--measure);
+  font-family:'IBM Plex Mono',monospace;
+  font-size:.8rem;
+  font-weight:500;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--indigo);
+  border-bottom:1px solid var(--rule);
+  padding-bottom:8px;
+  margin-bottom:26px;
+}
+
+/* news */
+.news{list-style:none;max-width:var(--measure);}
+.news li{
+  display:grid;
+  grid-template-columns:96px 1fr;
+  gap:18px;
+  padding:9px 0;
+  font-size:.96rem;
+}
+.news time{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:.75rem;
+  color:var(--muted);
+  padding-top:3px;
+  white-space:nowrap;
+}
+
+/* publications */
+.pub{
+  padding:20px 0;
+  border-bottom:1px solid var(--rule);
+  max-width:var(--measure);
+}
+.pub:last-child{border-bottom:none;}
+.pub-title{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  gap:18px;
+  font-weight:600;
+  font-size:1.05rem;
+  line-height:1.4;
+  margin-bottom:5px;
+}
+.pub-title .when{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:.72rem;
+  font-weight:400;
+  color:var(--muted);
+  white-space:nowrap;
+  flex:none;
+}
+.pub-authors{
+  font-size:.93rem;
+  color:var(--muted);
+  margin-bottom:5px;
+}
+.pub-authors b{color:var(--ink);font-weight:600;}
+.pub-venue{
+  font-size:.9rem;
+  margin-bottom:8px;
+}
+.pub-venue em{font-style:italic;}
+.tag{
+  display:inline-block;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:.68rem;
+  letter-spacing:.05em;
+  color:var(--indigo-dark);
+  background:var(--tint);
+  padding:2px 8px 3px;
+  border-radius:2px;
+  margin-right:6px;
+  vertical-align:middle;
+}
+.pub-links{font-size:.85rem;}
+.pub-links a{font-family:'IBM Plex Mono',monospace;font-size:.75rem;margin-right:14px;}
+.pub-note{
+  font-size:.9rem;
+  color:var(--muted);
+  margin-top:6px;
+  max-width:75ch;
+}
+
+/* teaching + generic two-col rows */
+.row{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:20px;
+  padding:14px 0;
+  border-bottom:1px solid var(--rule);
+  max-width:var(--measure);
+}
+.row:last-child{border-bottom:none;}
+.row .when{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:.74rem;
+  color:var(--muted);
+  padding-top:4px;
+  order:2;
+  text-align:right;
+  white-space:nowrap;
+}
+.row > div{order:1;}
+.row h3{
+  font-size:1rem;
+  font-weight:600;
+  margin-bottom:3px;
+}
+.loc{
+  font-style:italic;
+  font-size:.88rem;
+  color:var(--muted);
+  margin-bottom:6px;
+}
+.row p{font-size:.93rem;color:var(--muted);max-width:56ch;}
+.row p b{color:var(--ink);font-weight:600;}
+
+/* projects */
+.proj-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+  max-width:var(--measure);
+}
+.proj{
+  display:block;
+  border:1px solid var(--rule);
+  padding:14px 16px;
+  color:var(--ink);
+  border-bottom:1px solid var(--rule);
+  border-radius:2px;
+  transition:border-color .15s ease,background .15s ease;
+}
+.proj:hover{border-color:var(--indigo);background:#fff;border-bottom-color:var(--indigo);}
+.proj h3{font-size:.98rem;font-weight:600;margin-bottom:2px;}
+.proj h3::after{content:" ↗";font-size:.75em;color:var(--muted);}
+.proj p{font-size:.86rem;color:var(--muted);}
+.proj-more{margin-top:14px;font-size:.9rem;}
+@media (max-width:560px){.proj-grid{grid-template-columns:1fr;}}
+
+/* institution logos */
+.inst{display:flex;gap:16px;align-items:flex-start;}
+.inst-logo{
+  width:52px;height:52px;flex:none;
+  object-fit:contain;
+}
+.inst-logo-fallback{
+  width:52px;height:52px;flex:none;
+  display:none;align-items:center;justify-content:center;
+  background:var(--tint);
+  border:1px solid var(--rule);
+  border-radius:4px;
+  color:var(--indigo);
+  font-family:'IBM Plex Mono',monospace;
+  font-size:.72rem;font-weight:500;letter-spacing:.04em;
+}
+
+/* project tags */
+.proj-tag{
+  display:inline-block;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:.64rem;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+  color:var(--indigo-dark);
+  background:var(--tint);
+  padding:2px 7px 3px;
+  border-radius:2px;
+  margin-bottom:8px;
+}
+.proj{border-top:2px solid var(--rule);}
+.proj:hover{border-top-color:var(--indigo);}
+
+/* awards */
+.awards{list-style:none;max-width:var(--measure);}
+.awards li{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  gap:18px;
+  padding:8px 0 8px 22px;
+  position:relative;
+  font-size:.96rem;
+  border-bottom:1px dotted var(--rule);
+}
+.awards li:last-child{border-bottom:none;}
+.awards li::before{
+  content:"·";
+  position:absolute;
+  left:4px;
+  color:var(--indigo);
+  font-weight:700;
+}
+.awards li > span:first-child{max-width:500px;}
+.awards .when{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:.72rem;
+  color:var(--muted);
+  white-space:nowrap;
+  flex:none;
+}
+
+/* services under a role */
+.services{
+  margin-top:14px;
+  border-left:2px solid var(--tint);
+  padding-left:16px;
+}
+.services-label{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:.66rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--indigo);
+  margin-bottom:8px;
+}
+.services li{
+  list-style:none;
+  font-size:.9rem;
+  padding:4px 0;
+}
+.services li b{font-weight:600;color:var(--ink);}
+.services li span{color:var(--muted);}
+
+footer{
+  max-width:var(--measure);
+  margin-top:80px;
+  padding-top:20px;
+  border-top:1px solid var(--rule);
+  font-size:.8rem;
+  color:var(--muted);
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  flex-wrap:wrap;
+}
+footer .mono{font-size:.72rem;}
+
+@media (max-width:820px){
+  .wrap{grid-template-columns:1fr;gap:0;}
+  aside{padding-top:48px;padding-bottom:8px;}
+  .side-inner{position:static;width:auto;}
+  .photo{max-width:180px;}
+  nav{display:flex;flex-wrap:wrap;gap:2px 18px;margin-bottom:22px;}
+  main{padding-top:34px;}
+  .intro{font-size:1.22rem;}
+  .news li{grid-template-columns:80px 1fr;gap:12px;}
+  .row{grid-template-columns:1fr;gap:4px;}
+  .row .when{order:0;text-align:left;padding-top:0;}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+<aside>
+  <div class="side-inner">
+    <h1>Ariyan Hossain</h1>
+    <p class="role">Lecturer, Computer Science &amp; Engineering<br>BRAC University, Dhaka<br><em>NLP · Fairness · Responsible AI</em></p>
+
+    <div class="photo">
+      <img src="assets/profile.jpg" alt="Portrait of Ariyan Hossain" style="width:100%;height:100%;object-fit:cover;display:block" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
+      <span style="display:none">[ PHOTO ]</span>
+    </div>
+
+    <nav aria-label="Sections">
+      <a href="#about">about</a>
+      <a href="#news">news</a>
+      <a href="#publications">publications</a>
+      <a href="#experience">experience</a>
+      <a href="#education">education</a>
+      <a href="#projects">projects</a>
+      <a href="#talks">talks</a>
+      <a href="#awards">awards</a>
+    </nav>
+
+    <div class="contact">
+      <a href="mailto:ariyan.hossain2208@gmail.com" class="mono">ariyan.hossain2208@gmail.com</a><br>
+      <a href="https://scholar.google.com/citations?hl=en&user=AyQO80UAAAAJ" class="mono">google scholar</a> ·
+      <a href="https://github.com/ariyanhossain2208" class="mono">github</a><br>
+      <a href="https://linkedin.com/in/ariyanhossain" class="mono">linkedin</a> ·
+      <a href="https://cse.sds.bracu.ac.bd/faculty_profile/305/ariyan_hossain" class="mono">faculty page</a><br>
+      <a href="Ariyan_Hossain_CV.pdf" class="mono" id="cv-link">curriculum vitae (pdf)</a>
+      <span class="cv-note" id="cv-note" role="status">CV is not yet publicly available yet.</span>
+    </div>
+  </div>
+</aside>
+
+<main>
+
+<section id="about" style="margin-top:0">
+    <p class="intro">I want language technologies to be <br>
+      <button class="mask-token" id="mask" aria-label="Masked word. Activate to see the next prediction.">[MASK]</button><span class="mask-prob" id="maskProb" aria-hidden="true"></span>
+      for the people who use them, in every language they speak.</p>
+    <p class="intro-note">(Go ahead, unmask it. My thesis was about what models put in that blank.)</p>
+
+    <p class="lede">I am a Lecturer in Computer Science and Engineering at <a href="https://www.bracu.ac.bd/">BRAC University</a>, where I also completed my B.Sc. with university's Highest Distinction (<b>GPA: 4.0/4.0</b>). My research sits at the intersection of natural language processing (NLP) and fairness: I study how language models absorb, express, and transfer bias, and how we can measure and mitigate it.</p>
+    <p class="lede">My undergraduate thesis, supervised by <a href="https://sites.google.com/site/farigsadeque/home?authuser=0">Dr. Farig Sadeque</a>, introduced <b>MALoR</b>, a masked-token metric for quantifying gender bias in encoder models, and showed that counterfactual data augmentation can reduce measured bias by up to 95%. </p>
+    <p class="lede" style="margin-top:14px"><b>I am looking for PhD opportunities for Spring 2027 / Fall 2027</b> in trustworthy and fair NLP, human centered NLP, privacy and security in LLMs, and multilingual, low-resource language technology. If our interests overlap, I would be glad to hear from you.</p>
+  </section>
+
+<section id="news">
+    <h2>News</h2>
+    <ul class="news">
+      <li><time>Mar 2026</time><span>Two papers submitted to ARR (targeting EMNLP 2026): one on gender bias transfer in LLM-assisted student writing, one on benchmarking Bengali dialectal bias.</span></li>
+      <li><time>Dec 2025</time><span>Our paper on RAG techniques for Bengali standard-to-dialect translation was published at the BLP Workshop, IJCNLP–AACL 2025.</span></li>
+      <li><time>Nov 2025</time><span>My undergraduate thesis work on gender bias in encoder models is now on arXiv (<a href="https://arxiv.org/abs/2511.00519">2511.00519</a>).</span></li>
+    </ul>
+  </section>
+
+<section id="publications">
+    <h2>Publications &amp; Preprints</h2>
+
+    <div class="pub">
+      <p class="pub-title"><span>Contaminated Collaboration: Measuring Gender Bias Transfer in LLM-Assisted Student Writing</span><span class="when">2026</span></p>
+      <p class="pub-authors"><b>Ariyan Hossain</b>, K. K. Rabbi, Farig Sadeque, S. M. Taiabul Haque</p>
+      <p class="pub-venue"><span class="tag">under review · ARR</span> targeting <em>EMNLP 2026</em></p>
+      <p class="pub-links"><a href="https://arxiv.org/abs/2606.15914">[arXiv:2606.15914]</a></p>
+      <p class="pub-note">Conducted the first controlled study (N=153) on gender stereotype propagation in LLM-assisted career essay writing. Demonstrated bias transfer using a fine-tuned agency classifier and a novel Stereotype Congruence Rate (SCR) metric.</p>
+    </div>
+
+    <div class="pub">
+      <p class="pub-title"><span>Benchmarking Bengali Dialectal Bias: A Multi-Stage Framework Integrating RAG-Based Translation and Human-Augmented RLAIF</span><span class="when">2026</span></p>
+      <p class="pub-authors">K. M. J. Sami, D. Sumit, <b>Ariyan Hossain</b>, Farig Sadeque</p>
+      <p class="pub-venue"><span class="tag">under review · ARR</span> targeting <em>EMNLP 2026</em></p>
+      <p class="pub-links"><a href="https://arxiv.org/abs/2603.21359">[arXiv:2603.21359]</a></p>
+      <p class="pub-note">Created a benchmark evaluating 19 LLMs on 4,000 gold-labeled questions across nine Bengali dialects using RAG-based translation. Proposed an RLAIF bias evaluation framework with Chain-of-Thought rubrics and introduced the Cultural Bias Score (CBS) metric for safety-critical assessment.</p>
+    </div>
+
+    <div class="pub">
+      <p class="pub-title"><span>A Comparative Analysis of RAG Techniques for Bengali Standard-to-Dialect Machine Translation Using LLMs</span><span class="when">2025</span></p>
+      <p class="pub-authors">K. M. J. Sami, D. Sumit, <b>Ariyan Hossain</b>, Farig Sadeque</p>
+      <p class="pub-venue"><span class="tag">published</span> <em>BLP Workshop @ IJCNLP–AACL 2025</em>, ACL Anthology</p>
+      <p class="pub-links"><a href="https://aclanthology.org/2025.banglalp-1.22/">[paper]</a></p>
+      <p class="pub-note">Designed two RAG pipelines for standard-to-dialectal Bengali translation across six dialects using in-context learning. Improved translation accuracy by over 25% with sentence-pair RAG, enabling Llama-3.1-8B to outperform GPT-OSS-120B..</p>
+    </div>
+
+    <div class="pub">
+      <p class="pub-title"><span>Exploring and Mitigating Gender Bias in Encoder-Based Transformer Models</span><span class="when">2025</span></p>
+      <p class="pub-authors"><b>Ariyan Hossain</b>, K. M. A. Hannan, R. Haque, N. T. Rafa, H. Musarrat, S. A. Dipu, Farig Sadeque</p>
+      <p class="pub-venue"><span class="tag">preprint</span> Undergraduate Thesis, BRAC University</p>
+      <p class="pub-links"><a href="https://arxiv.org/abs/2511.00519">[arXiv:2511.00519]</a></p>
+      <p class="pub-note">Proposed MALoR, a metric for quantifying gender bias in encoder-based models. Built a gender-balanced pretraining dataset with over 19,000 counterfactual sentence pairs using CDA, reducing gender bias by up to 95%. </p>
+    </div>
+
+    <div class="pub">
+      <p class="pub-title"><span>Identifying Framing Bias in Online Climate Change News Articles</span><span class="when">2024 – 2025</span></p>
+      <p class="pub-authors"><b>Ariyan Hossain</b>, with Dr. Muhammad Nur Yanhaona</p>
+      <p class="pub-venue"> Research Project, BRAC University</p>
+      <p class="pub-note">Built a climate change news dataset using expert annotation and GPT-4 synthetic augmentation for multi-class framing classification. Fine-tuned Longformer, BigBird, BERT, and LLaMA 3.1, applying QLoRA for memory-efficient PEFT.</p>
+    </div>
+  </section>
+
+<section id="experience">
+    <h2>Work Experience</h2>
+    <div class="row">
+      <span class="when">2024 – present</span>
+      <div class="inst">
+        <img class="inst-logo" src="assets/bracu-logo.png" alt="BRAC University logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <span class="inst-logo-fallback" aria-hidden="true">BU</span>
+        <div>
+        <h3>Lecturer, Dept. of CSE, BRAC University</h3>
+        <p class="loc">Dhaka, Bangladesh</p>
+        <p>I teach <b>CSE220</b> (Data Structures), <b>CSE221</b> (Algorithms), and <b>CSE440</b> (Natural Language Processing) to 300+ undergraduate students each semester.</p>
+        <div class="services">
+          <p class="services-label">Other services</p>
+          <ul>
+            <li><b>Thesis Supervisor:</b> <span>Co-supervised and supervised 50+ students working on NLP undergraduate theses</span></li>
+            <li><b>Pre-Thesis I Panel Judge:</b> <span>Reviewed and provided feedback on initial thesis drafts of undergraduate teams</span></li>
+            <li><b>Final Thesis Defense Panel Judge</b>: <span>Reviewed and evaluated completed undergraduate research works</span></li>
+            <li><b>Course Advisor</b>: <span>Advised students on and approved undergraduate courses, and created course routines</span></li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="row">
+      <span class="when">2023 – 2024</span>
+      <div class="inst">
+        <img class="inst-logo" src="assets/bracu-logo.png" alt="BRAC University logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <span class="inst-logo-fallback" aria-hidden="true">BU</span>
+        <div>
+        <h3>Research Assistant, Dept. of CSE, BRAC University</h3>
+        <p class="loc">Dhaka, Bangladesh</p>
+        <p>Full-time RA under Dr. Muhammad Nur Yanhaona on news framing classification with ML and NLP.</p>
+      </div>
+      </div>
+    </div>
+    <div class="row">
+      <span class="when">2022 – 2023</span>
+      <div class="inst">
+        <img class="inst-logo" src="assets/bracu-logo.png" alt="BRAC University logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <span class="inst-logo-fallback" aria-hidden="true">BU</span>
+        <div>
+        <h3>Student Tutor (ST), Dept. of CSE, BRAC University</h3>
+        <p class="loc">Dhaka, Bangladesh</p>
+        <p>Graded, lectured occasionally, and held up to 15 hours/week of student consultations.</p>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="row">
+      <span class="when">2020 – 2023</span>
+      <div class="inst">
+        <img class="inst-logo" src="assets/bracu-logo.png" alt="BRAC University logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <span class="inst-logo-fallback" aria-hidden="true">BU</span>
+        <div>
+          <h3>B.Sc. in Computer Science and Engineering, BRAC University</h3>
+          <p class="loc">Dhaka, Bangladesh</p>
+          <p>
+            <b>Grade:</b> GPA 4.0/4.0 (Highest Distinction)<br>
+            <b>Thesis:</b> <em>Exploring and Mitigating Gender Bias in Transformer-based Language Models</em><br>
+            <b>Relevant Coursework:</b> NLP, Neural Networks, Artificial Intelligence, Linear Algebra, Calculus
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <span class="when">2017 – 2019</span>
+      <div class="inst">
+        <img class="inst-logo" src="assets/sunnydale-logo.png" alt="Cambridge Assessment International Education logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <span class="inst-logo-fallback" aria-hidden="true">CIE</span>
+        <div>
+          <h3>Cambridge O &amp; A Levels, Sunnydale</h3>
+          <p class="loc">Dhaka, Bangladesh</p>
+          <p>
+            <b>Award:</b> Outstanding Cambridge Learner Award for World's Highest Mark (100%) in AS Level Mathematics
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section id="projects">
+    <h2>Selected Projects</h2>
+    <div class="proj-grid">
+      <a class="proj" href="https://github.com/ariyanhossain2208/Detection-of-Online-Sexism-NLP">
+        <span class="proj-tag">NLP · Fairness</span>
+        <h3>BiasGuard: Explainable sexism detection in online texts</h3>
+        <p>Developed deep learning models (CNN, BiLSTM, and GRU) for sexist content detection in online text, with data preprocessing, embedding generation, and exploratory analysis.</p>
+      </a>
+      <a class="proj" href="https://github.com/ariyanhossain2208/Sentiment-Analysis-NLP">
+        <span class="proj-tag">NLP</span>
+        <h3>Sentiment Analysis on IMDB Movie Reviews</h3>
+        <p>Built sentiment analysis models using Naive Bayes, Logistic Regression, and LSTM to classify movie reviews, comparing traditional machine learning and deep learning approaches.</p>
+      </a>
+      <a class="proj" href="https://github.com/ariyanhossain2208/Exploring-Traditional-CNNs">
+        <span class="proj-tag">Computer Vision</span>
+        <h3>Image Classification with CNN Variants on CIFAR-10</h3>
+        <p>Designed and trained CNN models with varying architectures, comparing activation functions, kernel sizes, filters, and strides to evaluate their impact on image classification performance.</p>
+      </a>
+      <a class="proj" href="https://github.com/ariyanhossain2208/Wine-Quality-Prediction-ML">
+        <span class="proj-tag">Machine Learning</span>
+        <h3>Wine Quality Prediction using Machine Learning</h3>
+        <p>Built wine quality prediction models using Random Forest, Logistic Regression, Naive Bayes, and SVM, with feature engineering, scaling, and feature importance analysis.</p>
+      </a>
+      <a class="proj" href="https://github.com/ariyanhossain2208/Disaster-Guard">
+        <span class="proj-tag">IoT · Arduino</span>
+        <h3>DisasterGuard: Home Security System using Arduino and Sensors</h3>
+        <p>Developed an Arduino-based home security system using multiple sensors to detect earthquakes, gas leaks, smoke, and intrusions, with real-time SMS and buzzer alerts.</p>
+      </a>
+      <a class="proj" href="https://github.com/ariyanhossain2208/Pet-Care">
+        <span class="proj-tag">Web Platform</span>
+        <h3>Pet Care: Veterinary and Adoption Services Platform</h3>
+        <p>Developed a pet care management system with modules for feeding, medication, grooming, cleaning, veterinary services, and adoption using HTML, CSS, JavaScript, PHP, and MySQL.</p>
+      </a>
+    </div>
+    <p class="proj-more">More on <a href="https://github.com/ariyanhossain2208">GitHub →</a></p>
+  </section>
+
+<section id="talks">
+    <h2>Talks</h2>
+    <div class="row">
+      <span class="when">May 2025</span>
+      <div>
+        <h3>Talking to Machines: The Power of Natural Language Processing</h3>
+        <p class="loc">IEEE Robotics and Automation Society, BRAC University</p>
+        <p>Introduced NLP from how machines understand language to recent technologies including LLMs to 140+ undergraduate students <a href="https://drive.google.com/file/d/1bjlkFnfC3_dmXofq4458BKBdlIJYkuSn/view" class="mono" style="font-size:.75rem">[slides]</a></p>
+      </div>
+    </div>
+  </section>
+
+<section id="awards">
+    <h2>Awards &amp; Achievements</h2>
+    <ul class="awards">
+      <li><span><b>BRAC University Highest Distinction</b>: Awarded Highest Distinction for achieving a CGPA of 3.80 or higher. Graduated with perfect 4.0/4.0 GPA.</span><span class="when">2023</span></li>
+      <li><span><b>BRAC University 100% Performance-Based Scholarship</b>: Received 100% scholarship for maintaining CGPA of 4.0/4.0 throughout undergraduate studies.</span><span class="when">2020 – 2023</span></li>
+      <li><span><b>BRAC University Vice Chancellor’s List</b>: Recognized on Vice Chancellor's List 10 times during Bachelor's for achieving a GPA of 3.90-4.00 in multiple semesters.</span><span class="when">2020 – 2023</span></li>
+      <li><span><b>Outstanding Cambridge Learner Award</b>: Awarded World Highest Marks (100%) in AS Level Mathematics.</span><span class="when">2019</span></li>
+      <li><span><b>The Daily Star Award for A Level Outstanding Results</b>: Recognized for achieving a minimum of 3 A's in A Level examinations.</span><span class="when">2019</span></li>
+    </ul>
+  </section>
+
+<footer>
+    <span>© 2026 Ariyan Hossain · Dhaka, Bangladesh</span>
+    <span class="mono">last updated: july 2026</span>
+  </footer>
+
+</main>
+</div>
+
+<script>
+
+(function(){
+  var cvLink=document.getElementById("cv-link");
+  var cvNote=document.getElementById("cv-note");
+  var cvTimer;
+  cvLink.addEventListener("click",function(e){
+    e.preventDefault();
+    cvNote.classList.add("show");
+    clearTimeout(cvTimer);
+    cvTimer=setTimeout(function(){cvNote.classList.remove("show");},6000);
+  });
+})();
+
+
+(function(){
+  var words=[
+    {w:"fair",p:"0.41"},
+    {w:"trustworthy",p:"0.23"},
+    {w:"safe",p:"0.14"},
+    {w:"equitable",p:"0.11"},
+    {w:"accountable",p:"0.06"},
+    {w:"[MASK]",p:""}
+  ];
+  var i=-1;
+  var btn=document.getElementById("mask");
+  var prob=document.getElementById("maskProb");
+  btn.addEventListener("click",function(){
+    i=(i+1)%words.length;
+    btn.textContent=words[i].w;
+    prob.textContent=words[i].p?"p="+words[i].p:"";
+  });
+})();
+</script>
+
+</body>
+</html>
