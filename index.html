@@ -196,6 +196,7 @@ h2{
 }
 
 /* news */
+/* news */
 .news{list-style:none;max-width:var(--measure);}
 .news li{
   display:grid;
@@ -210,6 +211,33 @@ h2{
   color:var(--muted);
   padding-top:3px;
   white-space:nowrap;
+}
+
+.news.collapsed li:nth-child(n+4){
+  display:none;
+}
+.news-toggle{
+  background:none;
+  border:none;
+  padding:0;
+  margin-top:6px;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:.75rem;
+  letter-spacing:.04em;
+  color:var(--indigo);
+  cursor:pointer;
+  border-bottom:1px solid transparent;
+  transition:border-color .15s ease,color .15s ease;
+  display:inline-block;
+}
+.news-toggle:hover{
+  color:var(--indigo-dark);
+  border-bottom-color:var(--indigo);
+}
+.news-toggle:focus-visible{
+  outline:2px solid var(--indigo);
+  outline-offset:2px;
+  border-radius:1px;
 }
 
 /* publications */
@@ -489,14 +517,15 @@ footer .mono{font-size:.72rem;}
   </section>
 
 <section id="news">
-    <h2>News</h2>
-    <ul class="news">
-      <li><time>Aug 2026</time><span>Two of my papers (first author and third author) have been accepted as main conference at EMNLP 2026.</span></li>
-      <li><time>Mar 2026</time><span>Two papers submitted to ARR (targeting EMNLP 2026): one on gender bias transfer in LLM-assisted student writing, one on benchmarking Bengali dialectal bias.</span></li>
-      <li><time>Dec 2025</time><span>Our paper on RAG techniques for Bengali standard-to-dialect translation was published at the BLP Workshop, IJCNLP–AACL 2025.</span></li>
-      <li><time>Nov 2025</time><span>My undergraduate thesis work on gender bias in encoder models is now on arXiv (<a href="https://arxiv.org/abs/2511.00519">2511.00519</a>).</span></li>
-    </ul>
-  </section>
+  <h2>News</h2>
+  <ul class="news collapsed">
+    <li><time>Aug 2026</time><span>Two of my papers (first author and third author) have been accepted as main conference at EMNLP 2026.</span></li>
+    <li><time>Mar 2026</time><span>Two papers submitted to ARR (targeting EMNLP 2026): one on gender bias transfer in LLM-assisted student writing, one on benchmarking Bengali dialectal bias.</span></li>
+    <li><time>Dec 2025</time><span>Our paper on RAG techniques for Bengali standard-to-dialect translation is published at the BLP Workshop, IJCNLP–AACL 2025.</span></li>
+    <li><time>Nov 2025</time><span>My undergraduate thesis work on gender bias in encoder models is now on arXiv (<a href="https://arxiv.org/abs/2511.00519">2511.00519</a>).</span></li>
+  </ul>
+  <button id="news-toggle" class="news-toggle" onclick="toggleNews()" aria-expanded="false">+ show more</button>
+</section>
 
 <section id="publications">
     <h2>Publications &amp; Preprints</h2>
@@ -504,7 +533,7 @@ footer .mono{font-size:.72rem;}
     <div class="pub">
       <p class="pub-title"><span>Contaminated Collaboration: Measuring Gender Bias Transfer in LLM-Assisted Student Writing</span><span class="when">2026</span></p>
       <p class="pub-authors"><b>Ariyan Hossain</b>, K. K. Rabbi, Farig Sadeque, S. M. Taiabul Haque</p>
-      <p class="pub-venue"><span class="tag">published</span> <em>Main Conference @ EMNLP 2026, ACL Anthology</p>
+      <p class="pub-venue"><span class="tag">published</span> <em>Main Conference @ EMNLP 2026</em></p>
       <p class="pub-links"><a href="https://arxiv.org/abs/2606.15914">[arXiv:2606.15914]</a></p>
       <p class="pub-note">Conducted the first controlled study (N=153) on gender stereotype propagation in LLM-assisted career essay writing. Demonstrated bias transfer using a fine-tuned agency classifier and a novel Stereotype Congruence Rate (SCR) metric.</p>
     </div>
@@ -512,7 +541,7 @@ footer .mono{font-size:.72rem;}
     <div class="pub">
       <p class="pub-title"><span>Benchmarking Bengali Dialectal Bias: A Multi-Stage Framework Integrating RAG-Based Translation and Human-Augmented RLAIF</span><span class="when">2026</span></p>
       <p class="pub-authors">K. M. J. Sami, D. Sumit, <b>Ariyan Hossain</b>, Farig Sadeque</p>
-      <p class="pub-venue"><span class="tag">published</span> <em>Main Conference @ EMNLP 2026, ACL Anthology</p>
+      <p class="pub-venue"><span class="tag">published</span> <em>Main Conference @ EMNLP 2026</em></p>
       <p class="pub-links"><a href="https://arxiv.org/abs/2603.21359">[arXiv:2603.21359]</a></p>
       <p class="pub-note">Created a benchmark evaluating 19 LLMs on 4,000 gold-labeled questions across nine Bengali dialects using RAG-based translation. Proposed an RLAIF bias evaluation framework with Chain-of-Thought rubrics and introduced the Cultural Bias Score (CBS) metric for safety-critical assessment.</p>
     </div>
@@ -520,9 +549,9 @@ footer .mono{font-size:.72rem;}
     <div class="pub">
       <p class="pub-title"><span>A Comparative Analysis of RAG Techniques for Bengali Standard-to-Dialect Machine Translation Using LLMs</span><span class="when">2025</span></p>
       <p class="pub-authors">K. M. J. Sami, D. Sumit, <b>Ariyan Hossain</b>, Farig Sadeque</p>
-      <p class="pub-venue"><span class="tag">published</span> <em>BLP Workshop @ IJCNLP–AACL 2025</em>, ACL Anthology</p>
+      <p class="pub-venue"><span class="tag">published</span> <em>BLP Workshop @ IJCNLP–AACL 2025, ACL Anthology</em></p>
       <p class="pub-links"><a href="https://aclanthology.org/2025.banglalp-1.22/">[paper]</a></p>
-      <p class="pub-note">Designed two RAG pipelines for standard-to-dialectal Bengali translation across six dialects using in-context learning. Improved translation accuracy by over 25% with sentence-pair RAG, enabling Llama-3.1-8B to outperform GPT-OSS-120B..</p>
+      <p class="pub-note">Designed two RAG pipelines for standard-to-dialectal Bengali translation across six dialects using in-context learning. Improved translation accuracy by over 25% with sentence-pair RAG, enabling Llama-3.1-8B to outperform GPT-OSS-120B.</p>
     </div>
 
     <div class="pub">
@@ -536,7 +565,7 @@ footer .mono{font-size:.72rem;}
     <div class="pub">
       <p class="pub-title"><span>Identifying Framing Bias in Online Climate Change News Articles</span><span class="when">2024 – 2025</span></p>
       <p class="pub-authors"><b>Ariyan Hossain</b>, with Dr. Muhammad Nur Yanhaona</p>
-      <p class="pub-venue"> Research Project, BRAC University</p>
+      <p class="pub-venue">Research Project, BRAC University</p>
       <p class="pub-note">Built a climate change news dataset using expert annotation and GPT-4 synthetic augmentation for multi-class framing classification. Fine-tuned Longformer, BigBird, BERT, and LLaMA 3.1, applying QLoRA for memory-efficient PEFT.</p>
     </div>
   </section>
@@ -725,6 +754,14 @@ footer .mono{font-size:.72rem;}
     prob.textContent=words[i].p?"p="+words[i].p:"";
   });
 })();
+
+function toggleNews(){
+  var list = document.querySelector('.news');
+  var btn = document.getElementById('news-toggle');
+  var isCollapsed = list.classList.toggle('collapsed');
+  btn.textContent = isCollapsed ? '+ show more' : '− show less';
+  btn.setAttribute('aria-expanded', !isCollapsed);
+}
 </script>
 
 </body>
